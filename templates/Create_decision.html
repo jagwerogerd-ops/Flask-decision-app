@@ -1,0 +1,62 @@
+<h2>Create a decisions</h2>
+
+<form action="/create_decision" method="POST></form>
+
+  <!--title-->
+  <label for="title">Type your decision:</label> <br>
+  <input type="text" name="title">
+  
+  <br>
+  
+  <!--reason-->
+
+  <label for="reason"> Whats your reason for the decision:</label><br>
+  <input type="text" name="reason"> <br>
+
+  <!--confidence level-->
+
+  <label for="confidence_level"> How confident are you</label><br> <br>
+  <select name="confidence_level" id="confidence_level">
+        <option value="1"> I am not sure about this</option>
+        <option value="2">I am skeptical</option>
+        <option value="3">I am 50/50</option>
+        <option value="4">I somehow trust this</option>
+        <option value="5">I am confident about this</option>
+</select>
+
+  <br><br>
+  <button type="submit"> Go</button>
+</form>
+
+
+<h1>List of your decisions</h1>
+  <style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Reason</th>
+        <th>Confidence Level</th>
+        <th>Outcome</th>
+        <th>Lesson</th>
+        <th>Created At</th>
+    </tr>
+
+    {% for decision in decisions %}
+    <tr>
+        <td>{{ decision.title }}</td>
+        <td>{{ decision.reason }}</td>
+        <td>{{ decision.Confidence_level }}</td>
+        <td>{{ decision.Outcome }}</td>
+        <td>{{ decision.Lesson }}</td>
+        <td>{{ decision.CreatedAt }}</td>
+    </tr>
+    {% endfor %}
+</tabl

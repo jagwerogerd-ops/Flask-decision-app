@@ -1,0 +1,41 @@
+<h2>Update a Decision</h2>
+
+<form action="/create_decision" method="POST></form>
+
+  <!--title-->
+    <input type="text" name="title">
+  <br>
+  <!--reason-->
+
+  <input type="text" name="reason"> <br>
+
+  <!--confidence level-->
+<br>
+  <select name="confidence_level" id="confidence_level">
+    <option value={{decision.confidence_level}}>{{decision.confidence_level}}</option>
+
+</select>
+<br><br>
+  <button type="submit"> Log your Decision</button> 
+
+
+  <h1>Outcome and Lesson Learned</h1>
+  <hr>
+
+   <select name="Outcomes" id="Outcomes">
+        <option value="Success">Success</option>
+        <option value="Failed">Failed</option>
+        <option value="Pending">Pending</option>
+  </select>
+  <br> <br>
+
+  <Label for="lesson_learned"></Label><br>
+  <textarea name="lesson_learned">
+
+  </textarea>
+  
+  <br> <br>
+  <button type="Submit"> Update Decision</button>
+
+</form>
+
